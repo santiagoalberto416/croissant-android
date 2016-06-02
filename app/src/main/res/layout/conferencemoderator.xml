@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/backgroundColor">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        style="@style/contentBanner">
+        <ImageView
+            style="@style/imgLogo"
+            android:src="@drawable/logo"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contentInfoUser"
+        style="@style/contentInfoUser"
+        android:layout_below="@id/header">
+        <ImageView
+            android:id="@+id/imgUser"
+            android:alpha="1"
+            style="@style/imgSpeaker"
+            android:src="@drawable/user"/>
+        <TextView
+            android:id="@+id/nameUser"
+            style="@style/nameUser"
+            android:text="Lorem Ipsum"
+            android:textColor="@color/backgroundColor"
+            android:layout_toRightOf="@id/imgUser"
+            android:layout_toLeftOf="@+id/btnLogout"/>
+        <Button
+            style="@style/btnLogout"
+            android:id="@+id/btnLogout"
+            android:text="@string/logout" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/contentsInfoConference"
+        android:id="@+id/titleConference"
+        android:layout_below="@id/contentInfoUser">
+        <TextView
+            android:id="@+id/conferenceTitle"
+            style="@style/titleConference"
+            android:text="My First Android App"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/line1"
+        android:layout_below="@id/titleConference"
+        style="@style/divisions"></RelativeLayout>
+
+    <RelativeLayout
+        style="@style/contentsInfoConference"
+        android:id="@+id/infoSpeaker"
+        android:layout_below="@id/line1">
+        <ImageView
+            android:id="@+id/imgSpeaker"
+            style="@style/imgSpeaker"
+            android:src="@drawable/user_black"/>
+        <TextView
+            android:id="@+id/nameSpeaker"
+            style="@style/nameSpeaker"
+            android:text="Lorem Ipsum"
+            android:layout_toRightOf="@id/imgSpeaker"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/line2"
+        android:layout_below="@id/infoSpeaker"
+        style="@style/divisions"></RelativeLayout>
+
+    <RelativeLayout
+        style="@style/contentsInfoConference"
+        android:id="@+id/infoConference"
+        android:layout_below="@id/line2">
+        <TextView
+            style="@style/infoConference"
+            android:id="@+id/timeConference"
+            android:layout_width="100dip"
+            android:text="23-20-2016\n23:01 pm"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/conferencePlace"
+            style="@style/infoConference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Room \nLaboratorio de redes y telecomunicaciones, Docencia 1"
+            android:layout_toLeftOf="@id/timeConference"
+            android:layout_marginRight="8dip"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_below="@id/infoConference"
+        android:alpha="0.1"
+        android:background="@drawable/shadow"></RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shadow"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:id="@+id/btnConference"
+            style="@style/optionButtonsModerator"
+            android:onClick="manageConference"
+            android:layout_below="@id/shadow"
+            >
+            <ImageView
+                android:id="@+id/imgBtnConf"
+                style="@style/imgLogoModerator"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/manage"/>
+            <TextView
+                android:id="@+id/textButtonConf"
+                style="@style/moderatorText"
+                android:text="@string/buton1Manage"
+                android:textColor="@color/backgroundColor"
+                android:layout_below="@+id/imgBtnConf"></TextView>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnCreate"
+            style="@style/optionButtonsModerator"
+            android:onClick="showConferences"
+            android:layout_toLeftOf="@id/btnConference"
+            >
+            <ImageView
+                android:id="@+id/imgBtnCreate"
+                style="@style/imgLogoModerator"
+                android:src="@drawable/createtrivia"/>
+            >
+            <TextView
+                android:id="@+id/textButtonCreate"
+                style="@style/moderatorText"
+                android:text="@string/buton2Manage"
+                android:textColor="@color/backgroundColor"
+                android:layout_below="@+id/imgBtnCreate"></TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnBackConferences3"
+            style="@style/optionButtonsModerator"
+            android:onClick="showConferences"
+            android:layout_below="@id/btnCreate"
+            >
+            <ImageView
+                android:id="@+id/imgBtnBack"
+                style="@style/imgLogoModerator"
+                android:src="@drawable/backtoconference"/>
+            <TextView
+                android:id="@+id/textButtonBack"
+                style="@style/moderatorText"
+                android:text="@string/buton3Conf"
+                android:textColor="@color/backgroundColor"
+                android:layout_below="@+id/imgBtnBack"></TextView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+

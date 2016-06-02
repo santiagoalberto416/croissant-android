@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#175952</color>
+    <color name="colorPrimaryDark">#175952</color>
+    <color name="colorAccent">#248156</color>
+    <color name="headerColor">#2D7069</color>
+    <color name="backgroundColor">#FFF</color>
+    <color name="divisions">#cccccc</color>
+    <color name="infoConference">#9c9c9c</color>
+    <color name="logout">#327D75</color>
+    <color name="btnLogout">#D15F2A</color>
+    <color name="btnLogoutClaro">#E47F52</color>
+    <color name="graphRight">#3686c2</color>
+    <color name="backgroundLogin">#ECF0F1</color>
+    <color name="divisionsLogin">#d1d1d1</color>
+    <color name="optionsModerator">#606060</color>
+    <color name="questionColor">#6e6e6e</color>
+    <color name="backgroundPopup">#87000000</color>
+    <color name="alert">#ba2b2b</color>
+    <color name="place">#a2cff0</color>
+    <color name="bad">#cf734f</color>
+    <color name="good">#99bd73</color>
+
+
+    <!--colorCalis -->
+
+    <color name="primary">#009688</color>
+    <color name="primary_dark">#00796B</color>
+    <color name="primary_light">#B2DFDB</color>
+    <color name="accent">#FF5722</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+
+</resources>

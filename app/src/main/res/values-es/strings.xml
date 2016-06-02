@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Croissant</string>
+    <string name="user_id"></string>
+    <string name="user_name"></string>
+    <string name="your_string_here">O tu puedes <u><strong>Registrarte</strong></u></string>
+    <string name="room_style"><u>Lugar:</u></string>
+    <string name="domainsite">https://croissant-santy-ruler.c9users.io</string>
+
+
+    <string name="id">id</string>
+    <string name="txtdate">Fecha de pregunta</string>
+    <string name="user">Lorem lipsum</string>
+    <string name="send">Enviar</string>
+    <string name="textboxmessage">maximo 255 caracteres </string>
+    <string name="cancel">cancelar</string>
+    <string name="logout">cerrar sesion</string>
+    <string name="writeMessage">Escribe tu pregunta :</string>
+    <string name="buton1Conf">Haz una pregunta</string>
+    <string name="buton2Conf">Mirar puntajes</string>
+    <string name="buton3Conf">Regresar a conferencias</string>
+    <string name="buton1Manage">Administrar conferencia</string>
+    <string name="buton2Manage">Crear trivia</string>
+    <string name="titleConference">Selecciona una conferencia:</string>
+    <string name="returnButton">Regresar</string>
+    <string name="deleteButton">Eliminar</string>
+    <string name="accept">Aceptar</string>
+    <string name="editQuestion">Editar pregunta</string>
+    <string name="emailTint">Correo electronico</string>
+    <string name="password">Contraseña</string>
+    <string name="login">iniciar sesion</string>
+    <string name="signUp">Regístrate</string>
+    <string name="onHold">pregunta en espera</string>
+    <string name="sentQuestion">enviar pregunta</string>
+    <string name="declinedQuestion">Preguntas eliminadas</string>
+    <string name="sendToTrivia">Enviar a trivia</string>
+    <string name="edit">Editar</string>
+    <string name="decline">Declinar</string>
+    <string name="nameConference">Nombre de la conferencia</string>
+    <string name="scores">Puntajes</string>
+    <string name="question">Pregunta</string>
+    <string name="Read">Leer</string>
+
+
+
+
+    </resources>

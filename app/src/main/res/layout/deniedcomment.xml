@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/burbuja"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/denied_comment"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:padding="10dp"
+        >
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "id"
+            android:id="@+id/idOfQuestion"
+            android:visibility="invisible"
+            />
+        <TextView
+            style="@style/message"
+            android:id="@+id/dateOfQues"
+            android:text="dateOfQues"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:id="@+id/msName"
+            style="@style/message"
+            android:textSize="18sp"
+            android:text="Lorem lipsum"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+
+            />
+        <TextView
+            android:id="@+id/contentQuestion"
+            style="@style/messageCont"
+            android:textSize="18sp"
+            android:text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+            android:layout_below="@+id/msName"
+            android:layout_alignParentLeft="true"
+            />
+
+        <RelativeLayout
+            android:id = "@+id/contentdecline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contentQuestion"
+            style="@style/iconContainer"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:id="@+id/decline"
+                style="@style/imgIconsA"
+
+                android:src="@drawable/denie"
+                />
+            <TextView
+                android:id="@+id/declineText"
+                style="@style/iconTextWait"
+                android:text="@string/deleteButton"
+                android:layout_below="@+id/decline"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id = "@+id/contentedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contentQuestion"
+            android:layout_toLeftOf="@+id/contentdecline"
+            style="@style/iconContainer">
+            <ImageView
+                android:id="@+id/edit"
+                style="@style/imgIconsA"
+                android:src="@drawable/undo"
+                />
+            <TextView
+                android:id="@+id/editText"
+                style="@style/iconTextWait"
+                android:text="@string/returnButton"
+                android:layout_below="@+id/edit"
+                />
+        </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/burbuja"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-10dp"
+        android:layout_marginRight="-10dp">
+        <ImageView
+            android:id="@+id/imgSpeaker"
+            style="@style/imgSpeaker"
+            android:alpha="1"
+            android:layout_width="100dip"
+            android:src="@drawable/triangledenied"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

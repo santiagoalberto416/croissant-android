@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="titleConferences" parent="titleConference">
+        <item name="android:textColor">@color/backgroundColor</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:minHeight">50dp</item>
+    </style>
+
+    <style name="contentsInfoConference">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">50dip</item>
+        <item name="android:padding">8dip</item>
+    </style>
+
+    <style name="imgSpeakerMini">
+        <item name="android:layout_width">28dip</item>
+        <item name="android:layout_height">35dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+    <style name="nameSpeaker">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/infoConference</item>
+        <item name="android:layout_marginLeft">8dip</item>
+    </style>
+
+    <style name="divisions">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dip</item>
+        <item name="android:background">@color/divisions</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_marginRight">8dip</item>
+        <item name="android:alpha">0.5</item>
+    </style>
+
+    <style name="divisionsLogin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divisions</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:alpha">0.5</item>
+    </style>
+
+    <style name="buttonsModerator">
+        <item name="android:textColor">@color/optionsModerator</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/layer_list</item>
+    </style>
+
+</resources>

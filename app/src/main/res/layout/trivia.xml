@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backgroundColor"
+    tools:context="com.croissant.croissant.GoAndShowTrivia">
+    <RelativeLayout
+        android:id="@+id/header"
+        style="@style/contentBanner">
+        <ImageView
+            style="@style/imgLogo"
+            android:src="@drawable/logo"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contentInfoUser"
+        style="@style/contentInfoUser"
+        android:layout_below="@id/header">
+        <ImageView
+            android:id="@+id/imgUser"
+            android:alpha="1"
+            style="@style/imgSpeaker"
+            android:src="@drawable/user"/>
+        <TextView
+            android:id="@+id/nameUser"
+            style="@style/nameUser"
+            android:text="User name"
+            android:textColor="@color/backgroundColor"
+            android:layout_toRightOf="@id/imgUser"
+            android:layout_toLeftOf="@+id/btnLogout"/>
+        <Button
+            style="@style/btnLogout"
+            android:id="@+id/btnLogout"
+            android:text="@string/logout" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/contentsInfoConference"
+        android:id="@+id/titleConference"
+        android:layout_below="@id/contentInfoUser">
+        <TextView
+            android:id="@+id/conferenceTitle"
+            style="@style/titleConference"
+            android:text="@string/nameConference"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_below="@id/titleConference"
+        android:alpha="0.1"
+        android:background="@drawable/shadow"></RelativeLayout>
+    <TextView
+        android:id="@+id/infoTrivia"
+        style="@style/infoConference"
+        android:layout_below="@id/shadow"
+        android:layout_width="match_parent"
+        android:layout_marginTop="-30dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="18dp"
+        android:textColor="@color/questionColor"
+        android:text="Question"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:id="@+id/contentRadioButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoTrivia"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:textColor="@color/infoConference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Option 1"
+            android:padding="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/style_options_answers"
+            android:button="@android:color/transparent"
+            android:id="@+id/firstAnswer"/>
+
+        <RadioButton
+            android:textColor="@color/infoConference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@drawable/style_options_answers"
+            android:text="- Option 2"
+            android:layout_marginBottom="5dp"
+            android:button="@android:color/transparent"
+            android:id="@+id/secondAnswer" />
+
+        <RadioButton
+            android:textColor="@color/infoConference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:button="@android:color/transparent"
+            android:background="@drawable/style_options_answers"
+            android:text="- Option 3"
+            android:id="@+id/thirdAnswer" />
+    </RadioGroup>
+
+    <com.croissant.croissant.ReverseChronometerTrivia
+        android:layout_below="@id/contentRadioButtons"
+        android:id="@+id/chrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="50sp"
+        android:textColor="@color/backgroundColor"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btnSendAnswer"
+        style="@style/btnsAskQuestion"
+        android:layout_alignParentBottom="true"
+        android:onClick="sendAnswer"
+        android:layout_marginBottom="8dp"
+        android:text="OK" />
+
+</RelativeLayout>

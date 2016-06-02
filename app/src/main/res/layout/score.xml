@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+    <RelativeLayout
+        android:id="@+id/header"
+        style="@style/contentBanner">
+        <ImageView
+            style="@style/imgLogo"
+            android:src="@drawable/logo"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contentInfoUser"
+        style="@style/contentInfoUser"
+        android:layout_below="@id/header">
+        <ImageView
+            android:id="@+id/imgUser"
+            android:alpha="1"
+            style="@style/imgSpeaker"
+            android:src="@drawable/user"/>
+        <TextView
+            android:id="@+id/nameUser"
+            style="@style/nameUser"
+            android:text="User name"
+            android:textColor="@color/backgroundColor"
+            android:layout_toRightOf="@id/imgUser"
+            android:layout_toLeftOf="@+id/btnLogout"/>
+        <Button
+            style="@style/btnLogout"
+            android:id="@+id/btnLogout"
+            android:text="@string/logout" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/contentsInfoConference"
+        android:id="@+id/titleConference"
+        android:layout_below="@id/contentInfoUser">
+        <TextView
+            android:id="@+id/conferenceTitle"
+            style="@style/titleConference"
+            android:text="@string/nameConference"
+            android:gravity="center"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_below="@id/titleConference"
+        android:alpha="0.1"
+        android:background="@drawable/shadow"></RelativeLayout>
+    <ImageView
+        android:id="@+id/imageTitle"
+        android:layout_below="@id/shadow"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/liston"/>
+    <TextView
+        android:textSize="18dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-18dp"
+        android:layout_below="@id/shadow"
+        android:layout_width="wrap_content"
+        android:textColor="@color/backgroundColor"
+        android:text="@string/scores"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvTotalQuestions"
+        android:textSize="15dp"
+        android:textColor="@color/infoConference"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ScrollView
+        android:visibility="invisible"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@id/tvTotalQuestions"
+        android:id="@+id/scrollScoresConference"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="16dp"
+            android:layout_height="wrap_content">
+
+           <TextView
+                android:id="@+id/tvFirstPlaces"
+                android:text="First Places"
+                android:textSize="26dp"
+                android:textColor="@color/infoConference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:id="@+id/line1"
+                style="@style/divisionsLogin"
+                android:layout_below="@id/tvFirstPlaces">
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_below="@id/line1"
+                android:id="@+id/contentFirst"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:id="@+id/imgFirst"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:alpha="0.3"
+                    android:src="@drawable/user_black"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/imgFirst"
+                    android:src="@drawable/firstplace" />
+                <RelativeLayout
+                    android:id="@+id/contentInfoFirst"
+                    android:layout_toRightOf="@id/imgFirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true">
+                    <TextView
+                        android:textColor="@color/infoConference"
+                        android:id="@+id/tvFirstName"
+                        android:text="Santiago Hernandez"
+                        android:textSize="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/averageFirst"
+                        android:textColor="@color/infoConference"
+                        android:layout_below="@+id/tvFirstName"
+                        android:text="Average: 6s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/contentBarFirst"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="190dp"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/graphRight1"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:background="@color/graphRight"
+                        android:layout_centerVertical="true">
+                        <TextView
+                            android:id="@+id/pointsFirst"
+                            android:textColor="@color/backgroundColor"
+                            android:layout_centerInParent="true"
+                            android:text="6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_toRightOf="@id/graphRight1"
+                        android:id="@+id/graphBad1"
+                        android:background="@color/btnLogoutClaro"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true">
+                        <TextView
+                            android:id="@+id/pointsBadFirst"
+                            android:textColor="@color/backgroundColor"
+                            android:layout_centerInParent="true"
+                            android:text="4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/line2"
+                android:layout_marginTop="0dp"
+                style="@style/divisionsLogin"
+                android:layout_below="@id/contentFirst">
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_below="@id/line2"
+                android:id="@+id/contentSecond"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:id="@+id/imgSecond"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:alpha="0.3"
+                    android:src="@drawable/user_black"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/imgSecond"
+                    android:src="@drawable/secondplace" />
+                <RelativeLayout
+                    android:id="@+id/contentInfoSecond"
+                    android:layout_toRightOf="@id/imgSecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true">
+                    <TextView
+                        android:textColor="@color/infoConference"
+                        android:id="@+id/tvSecondName"
+                        android:text="Martha Reyes"
+                        android:textSize="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/averageSecond"
+                        android:textColor="@color/infoConference"
+                        android:layout_below="@+id/tvSecondName"
+                        android:text="Average: 5s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/contentBarSecond"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="190dp"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/graphRight2"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:background="@color/graphRight"
+                        android:layout_centerVertical="true">
+                        <TextView
+                            android:id="@+id/pointsSecond"
+                            android:textColor="@color/backgroundColor"
+                            android:layout_centerInParent="true"
+                            android:text="6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_toRightOf="@id/graphRight2"
+                        android:id="@+id/graphBad2"
+                        android:background="@color/btnLogoutClaro"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true">
+                        <TextView
+                            android:id="@+id/pointsBadSecond"
+                            android:textColor="@color/backgroundColor"
+                            android:layout_centerInParent="true"
+                            android:text="4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/line3"
+                android:layout_marginTop="0dp"
+                style="@style/divisionsLogin"
+                android:layout_below="@id/contentSecond">
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_below="@id/line3"
+                android:id="@+id/contentThird"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:id="@+id/imgThird"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:alpha="0.3"
+                    android:src="@drawable/user_black"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/imgThird"
+                    android:src="@drawable/thirdplace" />
+                <RelativeLayout
+                    android:id="@+id/contentInfoThird"
+                    android:layout_toRightOf="@id/imgThird"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true">
+                    <TextView
+                        android:textColor="@color/infoConference"
+                        android:id="@+id/tvThirdName"
+                        android:text="Abigail Penilla"
+                        android:textSize="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/averageThird"
+                        android:textColor="@color/infoConference"
+                        android:layout_below="@+id/tvThirdName"
+                        android:text="Average: 4s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/contentBarThird"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="190dp"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/graphRight3"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:background="@color/graphRight"
+                        android:layout_centerVertical="true">
+                        <TextView
+                            android:id="@+id/pointsThird"
+                            android:textColor="@color/backgroundColor"
+                            android:layout_centerInParent="true"
+                            android:text="6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_toRightOf="@id/graphRight3"
+                        android:id="@+id/graphBad3"
+                        android:background="@color/btnLogoutClaro"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true">
+                        <TextView
+                            android:id="@+id/pointsBadThird"
+                            android:textColor="@color/backgroundColor"
+                            android:layout_centerInParent="true"
+                            android:text="4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/line4"
+                android:layout_marginTop="0dp"
+                style="@style/divisionsLogin"
+                android:layout_below="@id/contentThird">
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/line4"
+                android:id="@+id/tvYourScore"
+                android:text="Your Score"
+                android:textSize="26dp"
+                android:textColor="@color/infoConference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/line5"
+                style="@style/divisionsLogin"
+                android:layout_below="@id/tvYourScore">
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/contentPosition"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/line5"
+                android:layout_width="110dp"
+                android:background="@drawable/background_place"
+                android:layout_height="110dp">
+                <TextView
+                    android:textSize="15dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Position"
+                    android:textColor="@color/backgroundColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/positionScore"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="50dp"
+                    android:text="15"
+                    android:textColor="@color/backgroundColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/line6"
+                android:layout_marginTop="21dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/divisions"
+                android:alpha="0.5"
+                android:layout_below="@id/line5"
+                android:layout_toRightOf="@+id/contentPosition"
+                android:layout_width="1dp"
+                android:layout_height="100dp"></RelativeLayout>
+
+            <TextView
+                android:textColor="@color/infoConference"
+                android:layout_below="@id/line5"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="150dp"
+                android:text="Questions\nAnswered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/square"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/line6"
+                android:layout_below="@+id/line5"
+                android:background="@color/good"
+                android:layout_width="20dp"
+                android:layout_height="20dp"></RelativeLayout>
+            <TextView
+                android:textColor="@color/infoConference"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="72dp"
+                android:layout_below="@id/line5"
+                android:layout_toRightOf="@id/square"
+                android:text="Good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/line6"
+                android:layout_below="@+id/square"
+                android:background="@color/bad"
+                android:layout_width="20dp"
+                android:layout_height="20dp"></RelativeLayout>
+            <TextView
+                android:textColor="@color/infoConference"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="102dp"
+                android:layout_below="@id/line5"
+                android:layout_toRightOf="@id/square"
+                android:text="Bad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:id="@+id/contentBarsYourScore"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/line5"
+                android:layout_marginLeft="220dp"
+                android:layout_width="match_parent"
+                android:layout_height="110dp">
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="80dp"
+                    android:layout_height="110dp">
+                    <RelativeLayout
+                        android:id="@+id/rightQuestionsBar"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="30dp"
+                        android:background="@color/good"
+                        android:layout_height="1100dp">
+                        <TextView
+                            android:id="@+id/pointsGood"
+                            android:textColor="@color/backgroundColor"
+                            android:text="6"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/badQuestionsBar"
+                        android:background="@color/bad"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="30dp"
+                        android:layout_height="50dp">
+                        <TextView
+                            android:id="@+id/pointsBad"
+                            android:textColor="@color/backgroundColor"
+                            android:text="3"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/line7"
+                android:layout_marginTop="16dp"
+                style="@style/divisionsLogin"
+                android:layout_below="@id/contentPosition">
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/line7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/background_bestime"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Best Time"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/backgroundColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tvBestTime"
+                        android:textColor="@color/backgroundColor"
+                        android:text="6s"
+                        android:textSize="35dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:orientation="vertical"
+                    android:id="@+id/besttime"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_worsttime"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Worst Time"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/backgroundColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tvWorstTime"
+                        android:textColor="@color/backgroundColor"
+                        android:text="14s"
+                        android:textSize="35dp"
+
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:id="@+id/timeaverage"
+                    android:background="@drawable/background_average"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Average Time"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/backgroundColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tvAverage"
+                        android:textColor="@color/backgroundColor"
+                        android:text="8s"
+                        android:textSize="35dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,305 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="imgLogo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">35dip</item>
+        <item name="android:layout_marginTop">8dip</item>
+        <item name="android:layout_marginBottom">8dip</item>
+    </style>
+
+    <style name="contentBanner">
+        <item name="android:background">@drawable/header_gradient</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">3dip</item>
+        <item name="android:paddingBottom">3dip</item>
+
+    </style>
+
+    <style name="contentInfoUser">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/logout</item>
+        <item name="android:minHeight">50dip</item>
+        <item name="android:padding">8dip</item>
+    </style>
+
+    <style name="btnLogout">
+        <item name="android:layout_width">100dip</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/backgroundColor</item>
+        <item name="android:textSize">18dip</item>
+        <item name="android:background">@drawable/btn_radius</item>
+
+    </style>
+
+    <style name="editext" parent="AppTheme">
+        <item name="android:textColorHint">@color/secondary_text</item>
+        <item name="colorControlNormal">@color/secondary_text</item>
+        <item name="android:padding">8dp</item>
+        <item name="colorControlHighlight">@color/secondary_text</item>
+    </style>
+
+    <style name="nameUser">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/infoConference</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_marginRight">8dip</item>
+    </style>
+
+    <style name="titleConference">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">26dip</item>
+        <item name="android:textColor">@color/infoConference</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+
+
+    <style name="imgSpeaker">
+        <item name="android:layout_width">35dip</item>
+        <item name="android:layout_height">35dip</item>
+        <item name="android:alpha">0.5</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+
+
+
+
+    <style name="infoConference">
+        <item name="android:textSize">15dip</item>
+        <item name="android:textColor">@color/infoConference</item>
+    </style>
+
+    <style name="optionButtons">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_marginRight">8dip</item>
+        <item name="android:layout_marginTop">10dip</item>
+        <item name="android:background">@drawable/background_btnoptions</item>
+        <item name="android:textColor">@color/backgroundColor</item>
+        <item name="android:textSize">20dip</item>
+    </style>
+
+    <style name="titleLogin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">33dip</item>
+        <item name="android:textColor">@color/infoConference</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">20dip</item>
+        <item name="android:paddingTop">20dip</item>
+    </style>
+
+    <style name="divisionLogin" parent="divisions">
+        <item name="android:background">@color/divisionsLogin</item>
+    </style>
+    
+    <style name="contentsTxtsLogin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:layout_marginTop">30dip</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_marginRight">8dip</item>
+        <item name="android:background">@color/backgroundColor</item>
+        <item name="android:minHeight">50dip</item>
+
+    </style>
+
+    <style name="txtsLogin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/backgroundColor</item>
+        <item name="android:textSize">22dip</item>
+        <item name="android:textColor">@color/infoConference</item>
+        <item name="android:textColorHint">@color/infoConference</item>
+    </style>
+
+    <style name="imgsTxtsLogin">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_marginRight">8dip</item>
+    </style>
+
+    <style name="btnLogin" parent="btnLogout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">33dip</item>
+        <item name="android:layout_marginTop">30dip</item>
+        <item name="android:layout_alignParentRight">false</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_marginRight">8dip</item>
+        <item name="android:paddingTop">8dip</item>
+        <item name="android:paddingBottom">8dip</item>
+    </style>
+
+    <style name="btnRegister">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:padding">14dip</item>
+        <item name="android:textSize">22dip</item>
+        <item name="android:textColor">@color/infoConference</item>
+    </style>
+
+    <style name="titleAskQuestion" parent="titleConference">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_marginTop">20dip</item>
+    </style>
+
+    <style name="scrollAskQuestion">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">110dip</item>
+        <item name="android:layout_marginTop">20dip</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_marginRight">8dip</item>
+        <item name="android:padding">8dip</item>
+        <item name="android:background">@drawable/stroke_scroll_askqstn</item>
+    </style>
+
+    <style name="txtAskQuestion">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">24dip</item>
+        <item name="android:textColor">@color/infoConference</item>
+        <item name="android:textColorHint">@color/infoConference</item>
+    </style>
+
+    <style name="contentBtnsAskQuestion">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:baselineAligned">true</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">8dip</item>
+    </style>
+
+    <style name="btnsAskQuestion">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_marginRight">8dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">22dip</item>
+        <item name="android:background">@drawable/background_btnoptions</item>
+        <item name="android:textColor">@color/backgroundColor</item>
+    </style>
+
+    <!-- pantalla moderador -->
+
+    <style name="optionButtonsModerator">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">.20</item>
+        <item name="android:layout_height">210dip</item>
+        <item name="android:layout_margin">4dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/background_btnoptions</item>
+        <item name="android:textColor">@color/backgroundColor</item>
+        <item name="android:textSize">20dip</item>
+    </style>
+
+    <style name="accepted_bubble">
+        <item name="android:background">@drawable/accept_comment</item>
+        <item name="android:layout_marginLeft">10px</item>
+        <item name="android:layout_marginRight">10px</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="moderatorText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/infoConference</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_marginRight">8dip</item>
+    </style>
+
+    <style name="imgLogoModerator">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">110dip</item>
+        <item name="android:layout_marginTop">8dip</item>
+        <item name="android:layout_marginBottom">8dip</item>
+    </style>
+
+    <style name="imgIconsA">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">35dip</item>
+        <item name="android:layout_gravity">center</item>
+
+        <item name="android:alpha">1</item>
+
+    </style>
+
+    <style name="iconTextWait" parent="iconText">
+        <item name="android:textColor">#BAA884</item>
+    </style>
+    <style name="iconTextTrivia" parent="iconText"><item name="android:textColor">#64737A</item></style>
+    <style name="message">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_marginRight">8dip</item>
+        <item name="android:textSize">22dip</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="messageCont">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_marginRight">8dip</item>
+        <item name="android:layout_marginTop">10dip</item>
+        <item name="android:textSize">22dip</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="iconText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16dip</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="iconContainer">
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+
+    <!-- end moderador -->
+
+</resources>

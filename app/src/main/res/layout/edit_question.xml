@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="680dp" android:layout_height="500dp">
+
+
+    <RelativeLayout
+        android:layout_width="680dp"
+        android:layout_height="500dp"
+        android:background="@color/backgroundColor"
+        android:padding="0dp"
+        android:layout_margin="0dp">
+
+        <TextView
+            android:id="@+id/titleEditQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/editQuestion"
+            android:textColor="@color/infoConference"
+            android:textSize="26dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"/>
+        <RelativeLayout
+            android:id="@+id/line4"
+            style="@style/divisions"
+            android:layout_below="@id/titleEditQuestion"
+            ></RelativeLayout>
+        <TextView
+            android:id="@+id/userEditQuestion"
+            style="@style/infoConference"
+            android:layout_below="@id/line4"
+            android:layout_width="wrap_content"
+            android:text="Brandon Reyes"
+            android:textSize="20dp"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/timeEditQuestion"
+            android:layout_below="@id/line4"
+            android:layout_margin="8dp"
+            android:layout_alignParentRight="true"
+            style="@style/infoConference"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23-05-2016 23:04:00"/>
+
+        <ScrollView
+            android:id="@+id/scrollEditQuestion"
+            android:layout_below="@id/timeEditQuestion"
+            style="@style/scrollAskQuestion"
+            android:background="@drawable/background_editquestion">
+
+            <EditText
+                android:id="@+id/txtEditQuestion"
+                style="@style/txtAskQuestion"/>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/contentBtnsAskQuestion"
+            style="@style/contentBtnsAskQuestion">
+
+            <Button
+                android:id="@+id/btnEditQuestion"
+                style="@style/btnsAskQuestion"
+                android:text="@string/accept"/>
+
+            <Button
+                android:id="@+id/btnCancelEditQuestion"
+                style="@style/btnsAskQuestion"
+                android:text="@string/cancel"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

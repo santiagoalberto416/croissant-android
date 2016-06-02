@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/icons">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        style="@style/contentBanner">
+        <ImageView
+            style="@style/imgLogo"
+            android:src="@drawable/logo"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp">
+            <ImageView
+                android:id="@+id/lenguageUsa"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:src="@drawable/usa"/>
+            <ImageView
+                android:id="@+id/lenguageMex"
+                android:layout_toRightOf="@id/lenguageUsa"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:src="@drawable/mex"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/line1"
+        style="@style/divisionLogin"
+        android:layout_below="@id/header"></RelativeLayout>
+
+    <ImageView
+        android:layout_below="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="76dp"
+        android:id="@+id/imgLogo"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:tint="@color/primary_dark"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/croissantlogo"/>
+
+
+    <RelativeLayout
+        android:id="@+id/contentEmail"
+        android:layout_below="@id/imgLogo"
+        style="@style/contentsTxtsLogin">
+
+        <ImageView
+            android:id="@+id/imgEmail"
+            style="@style/imgsTxtsLogin"
+            android:src="@drawable/mail"/>
+
+        <EditText
+            android:id="@+id/txtEmail"
+            style="@style/txtsLogin"
+            android:hint="@string/emailTint"
+            android:layout_toRightOf="@id/imgEmail"></EditText>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contentPassword"
+        android:layout_below="@id/contentEmail"
+        android:layout_marginTop="8dip"
+        style="@style/contentsTxtsLogin">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/secondary_text"
+            android:layout_marginTop="33dp">
+
+            <EditText
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/secondary_text"
+                android:hint="Password"
+                android:theme="@style/editext"
+                android:padding="8dp"
+                android:textSize="20sp"/>
+        </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/line2"
+        android:layout_marginTop="30dip"
+        android:layout_below="@id/contentPassword"
+        style="@style/divisionLogin"></RelativeLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:text="LOGIN"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/line2"
+        android:onClick="showOther"
+        android:layout_height="36dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/buttonlogin"
+        android:textColor="@color/primary_text_default_material_dark" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_below="@id/btnLogin"
+        style="@style/btnRegister"
+        android:text="@string/your_string_here"/>
+
+
+</RelativeLayout>

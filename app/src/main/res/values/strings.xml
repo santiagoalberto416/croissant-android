@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Croissant</string>
+    <string name="user_id"></string>
+    <string name="user_name"></string>
+    <string name="your_string_here">Or you can <u><strong>Register</strong></u></string>
+    <string name="room_style"><u>Room</u></string>
+    <string name="domainsite">https://croissant-santy-ruler.c9users.io</string>
+
+    <declare-styleable name="idsforconferences">
+        <attr name="id_conference" format="string" />
+    </declare-styleable>
+
+    <string name="id">id</string>
+    <string name="txtdate">dateOfQues</string>
+    <string name="user">Lorem lipsum</string>
+    <string name="send">Send</string>
+    <string name="textboxmessage">255 character limit</string>
+    <string name="cancel">cancel</string>
+    <string name="logout">logout</string>
+    <string name="writeMessage">Write your question :</string>
+    <string name="buton1Conf">Ask question</string>
+    <string name="buton2Conf">View Scores</string>
+    <string name="buton3Conf">Back to Conferences</string>
+    <string name="buton1Manage">Manage Question</string>
+    <string name="buton2Manage">Create Trivia</string>
+    <string name="titleConference">Select a Conference :</string>
+    <string name="returnButton">return</string>
+    <string name="deleteButton">delete</string>
+    <string name="accept">Accept</string>
+    <string name="editQuestion">Edit question</string>
+    <string name="emailTint">e-mail</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="signUp">Sign Up</string>
+    <string name="onHold">On Hold Question</string>
+    <string name="sentQuestion">Sent Question</string>
+    <string name="declinedQuestion">Declined Question</string>
+    <string name="sendToTrivia">Sent to Trivia</string>
+    <string name="edit">edit</string>
+    <string name="decline">decline</string>
+    <string name="nameConference">Name Conference</string>
+    <string name="scores">Scores</string>
+    <string name="question">Question</string>
+    <string name="Read">Read</string>
+
+
+
+
+    </resources>

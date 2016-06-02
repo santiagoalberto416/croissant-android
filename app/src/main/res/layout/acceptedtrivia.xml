@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/accemessage"
+
+        android:background="@drawable/accept_trivia"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "id"
+            android:id="@+id/idOfQuestion"
+            android:visibility="invisible"
+            />
+        <TextView
+            style="@style/message"
+            android:id="@+id/dateOfQues"
+            android:text="dateOfQues"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:id="@+id/msName"
+            style="@style/message"
+            android:text="Lorem lipsum"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+
+            />
+        <TextView
+            android:id="@+id/contentQuestion"
+            style="@style/messageCont"
+            android:text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+            android:textSize="18sp"
+            android:layout_below="@+id/msName"
+            android:layout_alignParentLeft="true"
+
+            />
+
+        <RelativeLayout
+            android:id = "@+id/sendtrivia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contentQuestion"
+            style="@style/iconContainer"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:id="@+id/decline"
+                style="@style/imgIconsA"
+
+                android:src="@drawable/sendtrivia"
+                />
+            <TextView
+                android:id="@+id/declineText"
+                style="@style/iconTextTrivia"
+                android:text="@string/send"
+                android:layout_below="@+id/decline"
+                />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accemessage"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-10dp"
+        android:layout_marginRight="-10dp">
+        <ImageView
+            android:id="@+id/imgSpeaker"
+            style="@style/imgSpeaker"
+            android:alpha="1"
+            android:layout_width="100dip"
+            android:src="@drawable/triangletrivia"
+            />
+
+    </RelativeLayout>-->
+</RelativeLayout>

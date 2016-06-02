@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/backgroundColor">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        style="@style/contentBanner">
+        <ImageView
+            style="@style/imgLogo"
+            android:src="@drawable/logo"/>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/contentInfoUser"
+        style="@style/contentInfoUser"
+        android:layout_below="@id/header">
+        <ImageView
+            android:id="@+id/imgUser"
+            android:alpha="1"
+            style="@style/imgSpeaker"
+            android:src="@drawable/user"/>
+        <TextView
+            android:id="@+id/nameUser"
+            style="@style/nameUser"
+            android:text="Lorem Ipsum"
+            android:textColor="@color/backgroundColor"
+            android:layout_toRightOf="@id/imgUser"
+            android:layout_toLeftOf="@+id/btnLogout"/>
+        <Button
+            style="@style/btnLogout"
+            android:id="@+id/btnLogout"
+            android:text="@string/logout" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/contentsInfoConference"
+        android:id="@+id/titleConference"
+        android:layout_below="@id/contentInfoUser">
+        <TextView
+            android:id="@+id/conferenceTitle"
+            style="@style/titleConference"
+            android:text="My First Android App"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/line1"
+        android:layout_below="@id/titleConference"
+        style="@style/divisions"></RelativeLayout>
+
+    <RelativeLayout
+        style="@style/contentsInfoConference"
+        android:id="@+id/infoSpeaker"
+        android:layout_below="@id/line1">
+        <ImageView
+            android:id="@+id/imgSpeaker"
+            style="@style/imgSpeaker"
+            android:src="@drawable/user_black"/>
+        <TextView
+            android:id="@+id/nameSpeaker"
+            style="@style/nameSpeaker"
+            android:text="Lorem Ipsum"
+            android:layout_toRightOf="@id/imgSpeaker"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/line2"
+        android:layout_below="@id/infoSpeaker"
+        style="@style/divisions"></RelativeLayout>
+
+    <RelativeLayout
+        style="@style/contentsInfoConference"
+        android:id="@+id/infoConference"
+        android:layout_below="@id/line2">
+        <TextView
+            style="@style/infoConference"
+            android:id="@+id/timeConference"
+            android:layout_width="100dip"
+            android:text="23-20-2016\n23:01 pm"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/conferencePlace"
+            style="@style/infoConference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Room \nLaboratorio de redes y telecomunicaciones, Docencia 1"
+            android:layout_toLeftOf="@id/timeConference"
+            android:layout_marginRight="8dip"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_below="@id/infoConference"
+        android:alpha="0.1"
+        android:background="@drawable/shadow"></RelativeLayout>
+
+    <Button
+        android:id="@+id/btnAskQstn"
+        style="@style/optionButtons"
+        android:layout_marginTop="30dip"
+        android:onClick="showAskQuestion"
+        android:layout_below="@id/infoConference"
+        android:text="@string/buton1Conf">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnViewScores"
+        android:onClick="showScores"
+        style="@style/optionButtons"
+        android:layout_below="@id/btnAskQstn"
+        android:text="@string/buton2Conf">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnBackConferences"
+        style="@style/optionButtons"
+        android:onClick="showConferences"
+        android:layout_below="@id/btnViewScores"
+        android:text="@string/buton3Conf">
+    </Button>
+
+</RelativeLayout>
+
+
+

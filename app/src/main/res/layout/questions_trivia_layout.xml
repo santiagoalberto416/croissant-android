@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="7dp">
+
+        <Button
+            android:id="@+id/btnGoQuestion"
+            android:layout_width="match_parent"
+            android:text="Question 1"
+            android:height="50dp"
+            android:gravity="center_vertical"
+            style="@style/btnsAskQuestion"
+            android:paddingLeft="8dp"
+            android:background="@drawable/background_btnoptions"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
