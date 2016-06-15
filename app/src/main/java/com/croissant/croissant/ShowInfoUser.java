@@ -18,6 +18,6 @@ public class ShowInfoUser {
         SharedPreferences sharedPreferences = activity.getSharedPreferences("myData", activity.MODE_PRIVATE);
         String name = sharedPreferences.getString("nameUser", DEFAULT);
         nameUser = (TextView)activity.findViewById(R.id.nameUser);
-        nameUser.setText("Hi, " + name);
+        nameUser.setText(activity.getResources().getString(R.string.hi) + name);
     }
 }
