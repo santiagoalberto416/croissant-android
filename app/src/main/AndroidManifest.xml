@@ -3,8 +3,8 @@
     package="com.croissant.croissant">
 
     <uses-sdk
-        android:minSdkVersion="7"
-        android:targetSdkVersion="11"/>
+        android:minSdkVersion="23"
+        android:targetSdkVersion="23"/>
     />
     <supports-screens
         android:largeScreens="true"
@@ -35,7 +35,7 @@
         <activity android:name="GoAndShowQuestionsManage" android:screenOrientation="portrait"/>
         <activity android:name="GoAndShowTrivia" android:screenOrientation="portrait"/>
         <activity android:name="GoAndShowScoresByConference" android:screenOrientation="portrait"/>
-        <activity android:name=".goAndShowActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ActivityEvent.goAndShowActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

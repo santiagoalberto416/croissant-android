@@ -6,110 +6,120 @@
     android:id="@+id/contentManageConference"
     android:background="@color/backgroundColor">
 
-    <RelativeLayout
-        android:id="@+id/header"
-        style="@style/contentBanner">
-        <ImageView
-            style="@style/imgLogo"
-            android:src="@drawable/logo"/>
-    </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/contentInfoUser"
-        style="@style/contentInfoUser"
-        android:layout_below="@id/header">
-        <ImageView
-            android:id="@+id/imgUser"
-            android:alpha="1"
-            style="@style/imgSpeaker"
-            android:src="@drawable/user"/>
-        <TextView
-            android:id="@+id/nameUser"
-            style="@style/nameUser"
-            android:text="Lorem Ipsum"
-            android:textColor="@color/backgroundColor"
-            android:layout_toRightOf="@id/imgUser"
-            android:layout_toLeftOf="@+id/btnLogout"/>
-        <Button
-            style="@style/btnLogout"
-            android:id="@+id/btnLogout"
-            android:text="@string/logout" />
-    </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/header"
+                style="@style/contentBanner"
+                android:elevation="16dp">
+                <ImageView
+                    style="@style/imgLogo"
+                    android:src="@drawable/logo"/>
+            </RelativeLayout>
 
-    <RelativeLayout
-        style="@style/contentsInfoConference"
-        android:id="@+id/titleConference"
-        android:layout_below="@id/contentInfoUser">
-        <TextView
-            style="@style/titleConference"
-            android:id="@+id/conferenceTitle"
-            android:text="My First Android App"
-            android:gravity="center"/>
-    </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@id/header"
+                android:id="@+id/contentIrrelevant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundColor"
+                android:elevation="9dp">
+            <RelativeLayout
+                android:id="@+id/contentInfoUser"
+                style="@style/contentInfoUser"
+                >
+                <ImageView
+                    android:id="@+id/imgUser"
+                    android:alpha="1"
+                    style="@style/imgSpeaker"
+                    android:src="@drawable/user"/>
+                <TextView
+                    android:id="@+id/nameUser"
+                    style="@style/nameUser"
+                    android:text="Lorem Ipsum"
+                    android:textColor="@color/backgroundColor"
+                    android:layout_toRightOf="@id/imgUser"
+                    android:layout_toLeftOf="@+id/btnLogout"/>
+                <Button
+                    style="@style/btnLogout"
+                    android:id="@+id/btnLogout"
+                    android:text="@string/logout" />
+            </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/line1"
-        android:layout_below="@id/titleConference"
-        style="@style/divisions"></RelativeLayout>
+            <RelativeLayout
+                style="@style/contentsInfoConference"
+                android:id="@+id/titleConference"
+                android:layout_below="@id/contentInfoUser">
+                <TextView
+                    style="@style/titleConference"
+                    android:id="@+id/conferenceTitle"
+                    android:text="My First Android App"
+                    android:gravity="center"/>
+            </RelativeLayout>
 
-    <RelativeLayout
-        style="@style/contentsInfoConference"
-        android:id="@+id/infoSpeaker"
-        android:layout_below="@id/line1">
-        <ImageView
-            android:id="@+id/imgSpeaker"
-            style="@style/imgSpeaker"
-            android:src="@drawable/user_black"/>
-        <TextView
-            android:id="@+id/nameSpeaker"
-            style="@style/nameSpeaker"
-            android:text="Lorem Ipsum"
-            android:layout_toRightOf="@id/imgSpeaker"/>
-    </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/line1"
+                android:layout_below="@id/titleConference"
+                style="@style/divisions"></RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/line2"
-        android:layout_below="@id/infoSpeaker"
-        style="@style/divisions"></RelativeLayout>
+            <RelativeLayout
+                style="@style/contentsInfoConference"
+                android:id="@+id/infoSpeaker"
+                android:layout_below="@id/line1">
+                <ImageView
+                    android:id="@+id/imgSpeaker"
+                    style="@style/imgSpeaker"
+                    android:src="@drawable/user_black"/>
+                <TextView
+                    android:id="@+id/nameSpeaker"
+                    style="@style/nameSpeaker"
+                    android:text="Lorem Ipsum"
+                    android:layout_toRightOf="@id/imgSpeaker"/>
+            </RelativeLayout>
 
-    <RelativeLayout
-        style="@style/contentsInfoConference"
-        android:id="@+id/infoConference"
-        android:layout_below="@id/line2">
-        <TextView
-            style="@style/infoConference"
-            android:id="@+id/timeConference"
-            android:layout_width="100dip"
-            android:text="23-20-2016\n23:01 pm"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"/>
-        <TextView
-            style="@style/infoConference"
-            android:id="@+id/conferencePlace"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="Room \nLaboratorio de redes y telecomunicaciones, Docencia 1"
-            android:layout_toLeftOf="@id/timeConference"
-            android:layout_marginRight="8dip"/>
-    </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/line2"
+                android:layout_below="@id/infoSpeaker"
+                style="@style/divisions"></RelativeLayout>
+
+            <RelativeLayout
+                style="@style/contentsInfoConference"
+                android:id="@+id/infoConference"
+                android:layout_below="@id/line2">
+                <TextView
+                    style="@style/infoConference"
+                    android:id="@+id/timeConference"
+                    android:layout_width="100dip"
+                    android:text="23-20-2016\n23:01 pm"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    style="@style/infoConference"
+                    android:id="@+id/conferencePlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Room \nLaboratorio de redes y telecomunicaciones, Docencia 1"
+                    android:layout_toLeftOf="@id/timeConference"
+                    android:layout_marginRight="8dip"/>
+            </RelativeLayout>
+
+            </RelativeLayout>
 
 
 
-    <ListView
-        android:layout_below="@id/infoConference"
-        android:id="@+id/lvAsksAceptedOfConference"
-        android:layout_marginTop="30dip"
-        android:layout_marginLeft="8dip"
-        android:layout_marginRight="8dip"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="10.0sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="visible"></ListView>
-
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@id/header"
+                android:id="@+id/lvAsksAceptedOfConference"
+                android:layout_marginTop="8dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10.0sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"></android.support.v7.widget.RecyclerView>
 
 
 </RelativeLayout>

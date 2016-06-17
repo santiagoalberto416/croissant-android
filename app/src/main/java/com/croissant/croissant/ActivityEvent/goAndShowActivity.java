@@ -1,25 +1,31 @@
-package com.croissant.croissant;
+package com.croissant.croissant.ActivityEvent;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.nkzawa.emitter.Emitter;
+import com.croissant.croissant.ListAdapter_aceptMesage;
+import com.croissant.croissant.Question;
+import com.croissant.croissant.R;
+import com.croissant.croissant.ShowInfoConference;
+import com.croissant.croissant.ShowInfoUser;
 import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
 
@@ -45,7 +51,7 @@ import java.util.ArrayList;
  */
 public class goAndShowActivity extends Activity{
 
-    ListView lvQuestionWaiting;
+    RecyclerView lvQuestionWaiting;
     private static ProgressDialog pd;
     private static InputStream data = null; //raw data received from api
     private static JSONObject result = null; //JSON Object
@@ -53,12 +59,16 @@ public class goAndShowActivity extends Activity{
     private static String domain = "https://croissant-santy-ruler.c9users.io";
     String urlAPI = ""; //API Url
     RelativeLayout tipoDiv;
+    int initialHeight;
 
+    RelativeLayout infoSpeaker;
+
+    int marginTopRecycler;
     public static String mode = "";
 
     public static ArrayList<Question> list2;
 
-    public static ListAdapter_aceptMesage adapter2;
+    public static RecyclerAdapterEvent adapter2;
 
     private static final String LABEL_ASKS ="asks";
     private static final String LABEL_ASKSA ="asksA";
@@ -252,13 +262,95 @@ public class goAndShowActivity extends Activity{
             este si
              */
 
-            lvQuestionWaiting = (ListView) findViewById(R.id.lvAsksAceptedOfConference);
-            adapter2 = new ListAdapter_aceptMesage( goAndShowActivity.this, list.get(0));
+            lvQuestionWaiting = (RecyclerView) findViewById(R.id.lvAsksAceptedOfConference);
+
+            adapter2 = new RecyclerAdapterEvent( list.get(0), getApplicationContext());
+            lvQuestionWaiting.setHasFixedSize(true);
+
+
             lvQuestionWaiting.setAdapter(adapter2);
+            lvQuestionWaiting.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
+            infoSpeaker = (RelativeLayout)findViewById(R.id.contentIrrelevant);
 
 
+            RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) lvQuestionWaiting.getLayoutParams();
+            int fabBottomMargin = lp.bottomMargin;
+            Log.d("margin top", infoSpeaker.getHeight()+"");
+            lvQuestionWaiting.animate().translationY(infoSpeaker.getHeight()).setInterpolator(new DecelerateInterpolator(2)).start();
 
+
+            lvQuestionWaiting.addOnScrollListener(new RecyclerView.OnScrollListener() {
+
+                int oldy = 0;
+                int diference = 0;
+
+                @Override
+                public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                    Log.d("scroll", "actual:" + dy + " old:" + oldy );
+                    super.onScrolled(recyclerView, dx, dy);
+                    if(dy>diference){
+                        hideViews(infoSpeaker);
+                        hideViewsRecicler(lvQuestionWaiting);
+                    }else if(dy<diference){
+                        showViews(infoSpeaker);
+                        showViewsRecycler(lvQuestionWaiting);
+
+                    }
+                    oldy = dy;
+                    diference = diference(dy, oldy);
+                    Log.d("diference", diference+"");
+                }
+
+
+            });
         }
+    }
+
+    private int diference(int y, int yold ){
+        y = Math.abs(y);
+        yold = Math.abs(yold);
+        int dif = 0;
+        if(yold<y){
+            dif = y-yold;
+        }else if(yold>y){
+            dif = yold-y;
+        }
+        return dif;
+    }
+
+    private void hideViews(View v) {
+
+        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) v.getLayoutParams();
+        int fabBottomMargin = lp.bottomMargin;
+        //
+        v.animate().translationY(-(v.getHeight()+fabBottomMargin)).setInterpolator(new AccelerateInterpolator(2)).start();
+        /*
+        View contentManageConference = findViewById(R.id.contentManageConference);
+        ViewGroup.LayoutParams params=lvQuestionWaiting.getLayoutParams();
+        params.height=contentManageConference.getHeight();
+        lvQuestionWaiting.setLayoutParams(params);
+        */
+
+    }
+
+    private void showViews(View v) {
+
+        v.animate().translationY(0).setInterpolator(new DecelerateInterpolator(2)).start();
+    }
+
+    private void hideViewsRecicler(View v) {
+
+        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) v.getLayoutParams();
+        int fabBottomMargin = lp.bottomMargin;
+        v.animate().translationY(0).setInterpolator(new DecelerateInterpolator(2)).setDuration(300).start();
+    }
+
+    private void showViewsRecycler(View v) {
+
+        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) v.getLayoutParams();
+        int fabBottomMargin = lp.bottomMargin;
+        v.animate().translationY(infoSpeaker.getHeight()).setInterpolator(new DecelerateInterpolator(2)).start();
     }
 
     public void ShowDeclined(View v)

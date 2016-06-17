@@ -55,6 +55,7 @@
             android:id="@+id/txtEmail"
             style="@style/txtsLogin"
             android:hint="@string/emailTint"
+            android:text="elkirk@gmail.com"
             android:layout_toRightOf="@id/imgEmail"></EditText>
 
     </RelativeLayout>
@@ -74,6 +75,7 @@
             android:id="@+id/txtPassword"
             style="@style/txtsLogin"
             android:hint="@string/password"
+            android:text="12345"
             android:inputType="textPassword"
             android:layout_toRightOf="@id/imgPassword"></EditText>
 
