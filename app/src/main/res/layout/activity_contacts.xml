@@ -112,11 +112,8 @@
             <android.support.v7.widget.RecyclerView
                 android:layout_below="@id/header"
                 android:id="@+id/lvAsksAceptedOfConference"
-                android:layout_marginTop="8dip"
                 android:layout_marginLeft="8dip"
                 android:layout_marginRight="8dip"
-                android:divider="@android:color/transparent"
-                android:dividerHeight="10.0sp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:visibility="visible"></android.support.v7.widget.RecyclerView>

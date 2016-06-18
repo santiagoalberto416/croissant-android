@@ -272,86 +272,12 @@ public class goAndShowActivity extends Activity{
             lvQuestionWaiting.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
             infoSpeaker = (RelativeLayout)findViewById(R.id.contentIrrelevant);
-
-
-            RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) lvQuestionWaiting.getLayoutParams();
-            int fabBottomMargin = lp.bottomMargin;
-            Log.d("margin top", infoSpeaker.getHeight()+"");
-            lvQuestionWaiting.animate().translationY(infoSpeaker.getHeight()).setInterpolator(new DecelerateInterpolator(2)).start();
-
-
-            lvQuestionWaiting.addOnScrollListener(new RecyclerView.OnScrollListener() {
-
-                int oldy = 0;
-                int diference = 0;
-
-                @Override
-                public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                    Log.d("scroll", "actual:" + dy + " old:" + oldy );
-                    super.onScrolled(recyclerView, dx, dy);
-                    if(dy>diference){
-                        hideViews(infoSpeaker);
-                        hideViewsRecicler(lvQuestionWaiting);
-                    }else if(dy<diference){
-                        showViews(infoSpeaker);
-                        showViewsRecycler(lvQuestionWaiting);
-
-                    }
-                    oldy = dy;
-                    diference = diference(dy, oldy);
-                    Log.d("diference", diference+"");
-                }
-
-
-            });
+            HidingScrollListener hidingScrollListener = new HidingScrollListener(infoSpeaker, lvQuestionWaiting);
+            lvQuestionWaiting.addOnScrollListener(hidingScrollListener);
         }
     }
 
-    private int diference(int y, int yold ){
-        y = Math.abs(y);
-        yold = Math.abs(yold);
-        int dif = 0;
-        if(yold<y){
-            dif = y-yold;
-        }else if(yold>y){
-            dif = yold-y;
-        }
-        return dif;
-    }
 
-    private void hideViews(View v) {
-
-        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) v.getLayoutParams();
-        int fabBottomMargin = lp.bottomMargin;
-        //
-        v.animate().translationY(-(v.getHeight()+fabBottomMargin)).setInterpolator(new AccelerateInterpolator(2)).start();
-        /*
-        View contentManageConference = findViewById(R.id.contentManageConference);
-        ViewGroup.LayoutParams params=lvQuestionWaiting.getLayoutParams();
-        params.height=contentManageConference.getHeight();
-        lvQuestionWaiting.setLayoutParams(params);
-        */
-
-    }
-
-    private void showViews(View v) {
-
-        v.animate().translationY(0).setInterpolator(new DecelerateInterpolator(2)).start();
-    }
-
-    private void hideViewsRecicler(View v) {
-
-        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) v.getLayoutParams();
-        int fabBottomMargin = lp.bottomMargin;
-        v.animate().translationY(0).setInterpolator(new DecelerateInterpolator(2)).setDuration(300).start();
-    }
-
-    private void showViewsRecycler(View v) {
-
-        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) v.getLayoutParams();
-        int fabBottomMargin = lp.bottomMargin;
-        v.animate().translationY(infoSpeaker.getHeight()).setInterpolator(new DecelerateInterpolator(2)).start();
-    }
 
     public void ShowDeclined(View v)
     {
