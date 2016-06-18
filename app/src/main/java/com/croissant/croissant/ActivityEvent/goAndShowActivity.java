@@ -21,11 +21,13 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.croissant.croissant.GoAndShowQuestionsManage;
 import com.croissant.croissant.ListAdapter_aceptMesage;
 import com.croissant.croissant.Question;
 import com.croissant.croissant.R;
 import com.croissant.croissant.ShowInfoConference;
 import com.croissant.croissant.ShowInfoUser;
+import com.github.nkzawa.emitter.Emitter;
 import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
 
@@ -93,6 +95,37 @@ public class goAndShowActivity extends Activity{
             throw new RuntimeException(e);
         }
     }
+
+    private Emitter.Listener showNewQuestions = new Emitter.Listener(){
+        @Override
+        public void call(final Object... args){
+            goAndShowActivity.this.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    JSONObject data = (JSONObject) args[0];
+                    addQuestionFromServer(data);
+                    try {
+                        Log.d("info", data.getString("question"));
+                    } catch (JSONException ex) {
+                    }
+                }
+            });
+        }
+    };
+
+    private void addQuestionFromServer(JSONObject data)
+    {
+        try {
+            Question question = new Question(
+                    data.getInt("id"),
+                    data.getString("question"),
+                    data.getString("date"),
+                    data.getString("user"));
+            list2.add(0, question);
+            adapter2.animateTo(list2);
+        }catch (JSONException ex){}
+    }
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
@@ -105,13 +138,8 @@ public class goAndShowActivity extends Activity{
         urlAPI = domain +  "/croissant/getallsasks.php"; //API Url
         new LoadWaitQuestions().execute(idConference);
 
-        /*
-        socket.on("newMessage", showNewQuestions);
+        socket.on("newSpeaker", showNewQuestions);
         socket.connect();
-        //registerClickCallback();
-        /*
-        mode = "3";
-        new LoadWaitQuestions().execute(idConference, mode);*/
 
     }
 

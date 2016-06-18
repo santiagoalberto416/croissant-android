@@ -30,6 +30,7 @@ public class RecyclerAdapterEvent  extends RecyclerView.Adapter<RecyclerAdapterE
     public RecyclerAdapterEvent(List<Question> items, Context context) {
         this.items = items;
         this.context = context;
+        animateTo(items);
     }
 
 
@@ -74,6 +75,69 @@ public class RecyclerAdapterEvent  extends RecyclerView.Adapter<RecyclerAdapterE
 
         }
     }
+
+
+    public void animateTo(List<Question> items) {
+        applyAndAnimateRemovals(items);
+        applyAndAnimateAdditions(items);
+        applyAndAnimateMovedItems(items);
+        showChange(items);
+    }
+
+    private void showChange(List<Question> newModels) {
+        for (int i = 0, count = newModels.size(); i < count; i++) {
+            notifyItemChanged(i);
+        }
+    }
+
+    private void applyAndAnimateRemovals(List<Question> newModels) {
+        for (int i = items.size() - 1; i >= 0; i--) {
+            final Question model = items.get(i);
+            if (!newModels.contains(model)) {
+                removeItem(i);
+            }
+        }
+    }
+
+
+    private void applyAndAnimateAdditions(List<Question> newModels) {
+        for (int i = 0, count = newModels.size(); i < count; i++) {
+            final Question model = newModels.get(i);
+            if (!items.contains(model)) {
+                addItem(i, model);
+            }
+        }
+    }
+
+    private void applyAndAnimateMovedItems(List<Question> newModels) {
+        for (int toPosition = newModels.size() - 1; toPosition >= 0; toPosition--) {
+            final Question model = newModels.get(toPosition);
+            final int fromPosition = items.indexOf(model);
+            if (fromPosition >= 0 && fromPosition != toPosition) {
+                moveItem(fromPosition, toPosition);
+            }
+        }
+    }
+
+    public Question removeItem(int position) {
+        final Question model = items.remove(position);
+        notifyItemRemoved(position);
+        return model;
+    }
+
+    public void addItem(int position, Question model) {
+        items.add(position, model);
+        notifyItemInserted(position);
+    }
+
+    public void moveItem(int fromPosition, int toPosition) {
+        final Question model = items.remove(fromPosition);
+        items.add(toPosition, model);
+        notifyItemMoved(fromPosition, toPosition);
+    }
+
+
+
 
 }
 
