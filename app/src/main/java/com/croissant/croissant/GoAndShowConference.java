@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.croissant.croissant.ActivityEvent.goAndShowActivity;
+import com.croissant.croissant.Graphics.Activities.graphics;
 
 /**
  * Created by brandon on 12/03/16.
@@ -37,7 +38,8 @@ public class GoAndShowConference extends Activity{
     }
 
     public void showScores(View v) {
-        startActivity(new Intent(this, GoAndShowScoresByConference.class));
+        Intent intent = new Intent(this, graphics.class);
+        startActivity(intent);
     }
 
     @Override

@@ -4,38 +4,61 @@
 
     <uses-sdk
         android:minSdkVersion="23"
-        android:targetSdkVersion="23"/>
+        android:targetSdkVersion="23" />
     />
     <supports-screens
         android:largeScreens="true"
         android:normalScreens="true"
-        android:smallScreens="true"/>
+        android:smallScreens="true" />
     />
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.NoTitleBar"
-        >
-        <activity android:name=".MainActivity" android:screenOrientation="portrait">
+        android:theme="@style/Theme.AppCompat">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="GoAndShowConferences" android:screenOrientation="portrait"/>
-        <activity android:name="GoAndShowConference" android:screenOrientation="portrait" />
-        <activity android:name="GoAndShowAskQuestion"
-            android:windowSoftInputMode="adjustPan" android:screenOrientation="portrait"/>
-        <activity android:name="GoAndShowManage" android:screenOrientation="portrait"/>
-        <activity android:name="GoAndShowQuestionsManage" android:screenOrientation="portrait"/>
-        <activity android:name="GoAndShowTrivia" android:screenOrientation="portrait"/>
-        <activity android:name="GoAndShowScoresByConference" android:screenOrientation="portrait"/>
-        <activity android:name=".ActivityEvent.goAndShowActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".GoAndShowConferences"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GoAndShowConference"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GoAndShowAskQuestion"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".GoAndShowManage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GoAndShowQuestionsManage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GoAndShowTrivia"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GoAndShowScoresByConference"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityEvent.goAndShowActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Graphics.Activities.graphics"></activity>
+
     </application>
 
 </manifest>

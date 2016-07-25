@@ -7,6 +7,19 @@
     <string name="domainsite">https://croissant-santy-ruler.c9users.io</string>
 
 
+
+
+    <string name="noonegood">Nadie Respondio correctamente</string>
+    <string name="noonebad">Nadie respondio incorrectamente</string>
+    <string name="correctAns">Respuesta correcta</string>
+    <string name="WrongAnswer">Respuestas incorrectas</string>
+    <string name="personsRight">Personas acertaron</string>
+    <string name="personsWrong">Personas se equivocaron</string>
+    <string name="personRight">Persona acerto</string>
+    <string name="personWrong">Persona se equivoco</string>
+
+    <string name="noQuestionMesssage">Lo sentimos, no hay preguntas en esta conferencia</string>
+    <string name="sorryMessage">Que mal, Nadie contesto esta pregunta</string>
     <string name="id">id</string>
     <string name="txtdate">Fecha de pregunta</string>
     <string name="user">Lorem lipsum</string>

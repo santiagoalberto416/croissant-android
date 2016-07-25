@@ -65,7 +65,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-        ButterKnife.bind(this);
 
         ImageView usa = (ImageView)findViewById(R.id.lenguageUsa);
         usa.setOnClickListener(new View.OnClickListener() {

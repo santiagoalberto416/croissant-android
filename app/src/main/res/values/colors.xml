@@ -32,6 +32,11 @@
     <color name="secondary_text">#727272</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
+    <color name="linecolor">#e1e1e1</color>
+    <color name="graphicempty">#C8C8C8</color>
+    <color name="grapsgood">#009688</color>
+    <color name="grapsbad">#880000</color>
+    <color name="graybackground">#EBEBEB</color>
 
 
 </resources>

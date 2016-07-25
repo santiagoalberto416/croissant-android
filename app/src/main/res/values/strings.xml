@@ -10,6 +10,17 @@
         <attr name="id_conference" format="string" />
     </declare-styleable>
 
+    <string name="noonegood">No one answered right</string>
+    <string name="noonebad">No one answered wrong</string>
+    <string name="correctAns">Correct Answer</string>
+    <string name="WrongAnswer">Wrong Answers</string>
+    <string name="personsRight">Persons are right</string>
+    <string name="personsWrong">Persons are Wrong</string>
+    <string name="personRight">Person is correct</string>
+    <string name="personWrong">Person is wrong</string>
+
+    <string name="noQuestionMesssage">Sorry there isnt questions in this conference</string>
+    <string name="sorryMessage">So bad, no one answered this question</string>
     <string name="id">id</string>
     <string name="txtdate">dateOfQues</string>
     <string name="user">Lorem lipsum</string>
@@ -45,7 +56,8 @@
     <string name="hi">Hi ,</string>
     <string name="activitybutton">See activity of event</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-
-    </resources>
+</resources>
