@@ -1,5 +1,5 @@
 
-package com.example.santiago.data;
+package com.example.santiago.data.GraphicsAllPersons;
 
 import java.util.ArrayList;
 import java.util.List;

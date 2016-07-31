@@ -1,5 +1,5 @@
 
-package com.example.santiago.data;
+package com.example.santiago.data.GraphicsAllPersons;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

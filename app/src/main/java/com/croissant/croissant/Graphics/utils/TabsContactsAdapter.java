@@ -8,6 +8,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.croissant.croissant.Graphics.Fragments.GeneralInformation;
 import com.croissant.croissant.Graphics.Fragments.ListOfQuestions;
+import com.croissant.croissant.Graphics.Fragments.WinnersOfConference;
+import com.croissant.croissant.R;
 
 /**
  * Created by santiago on 11/07/2016.
@@ -15,13 +17,13 @@ import com.croissant.croissant.Graphics.Fragments.ListOfQuestions;
 
 public class TabsContactsAdapter extends FragmentPagerAdapter {
 
-        private String tabs_ [] = {"Your Score", "All Questions"};
-        private int idConference;
+        private String tabs_ [] = {"", ""};
 
         // Constructor
         public TabsContactsAdapter(FragmentManager fragmentManager, int idConference, Context context) {
             super(fragmentManager);
-            this.idConference = idConference;
+            tabs_[0] = context.getResources().getString(R.string.first_paces);
+            tabs_[1] = context.getResources().getString(R.string.scores_of_conference);
         }
 
         /**
@@ -35,7 +37,7 @@ public class TabsContactsAdapter extends FragmentPagerAdapter {
         public Fragment getItem(int position) {
             switch (position){
                 case 0:
-                    ListOfQuestions fragmentAlph = new ListOfQuestions();
+                    WinnersOfConference fragmentAlph = new WinnersOfConference();
                     return fragmentAlph;
                 case 1:
                     ListOfQuestions fragmentTeam = new ListOfQuestions();

@@ -17,7 +17,10 @@
     <string name="personsWrong">Personas se equivocaron</string>
     <string name="personRight">Persona acerto</string>
     <string name="personWrong">Persona se equivoco</string>
-
+    <string name="titlegraphics">Ganadores</string>
+    <string name="scores_of_conference">Preguntas</string>
+    <string name="first_paces">Primeros Lugares</string>
+    <string name="pointsof"> puntos de un total </string>
     <string name="noQuestionMesssage">Lo sentimos, no hay preguntas en esta conferencia</string>
     <string name="sorryMessage">Que mal, Nadie contesto esta pregunta</string>
     <string name="id">id</string>

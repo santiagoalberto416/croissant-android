@@ -3,7 +3,6 @@ package com.croissant.croissant.adapters;
 import android.content.Context;
 import android.content.res.Resources;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,10 +11,9 @@ import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
-import com.croissant.croissant.Answer;
 import com.croissant.croissant.R;
-import com.example.santiago.data.AnswerOption;
-import com.example.santiago.data.Ask;
+import com.example.santiago.data.GraphicsAllPersons.AnswerOption;
+import com.example.santiago.data.GraphicsAllPersons.Ask;
 
 import java.util.ArrayList;
 import java.util.List;

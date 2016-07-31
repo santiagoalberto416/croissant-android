@@ -1,0 +1,288 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".Graphics.Fragments.WinnersOfConference">
+
+
+
+    <RelativeLayout
+        android:id="@+id/progressQuestions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:id="@+id/progressBar"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleContainer">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_margin="16dp"
+                android:textSize="16dp"
+                android:textColor="@color/primary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titlegraphics"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/title"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@color/secondplace">
+
+            </View>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_below="@id/titleContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstPlaceContainer">
+
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:id="@+id/imagetrophy1st"
+                android:background="@drawable/backgroundtrophy"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/trophy"
+
+                    android:layout_margin="16dp"
+                    android:tint="@color/backgroundColor">
+                </ImageView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/nameWinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Santiago Kirk"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:textSize="16dp"
+                android:layout_toRightOf="@id/imagetrophy1st"/>
+
+            <TextView
+                android:id="@+id/points1"
+                android:layout_below="@id/nameWinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 puntos de un total 26"
+                android:textColor="@color/secondary_text"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="16dp"
+                android:textSize="16dp"
+                android:layout_toRightOf="@id/imagetrophy1st"/>
+
+            <LinearLayout
+                android:layout_below="@id/points1"
+                android:layout_toRightOf="@id/imagetrophy1st"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                >
+                <RelativeLayout
+                    android:id="@+id/incorrectBar"
+                    android:layout_width="0dp"
+                    android:layout_weight="0"
+                    android:layout_height="16dp"
+                    android:background="@color/barcolor"></RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/emptyBar1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/graphicempty"
+                    android:layout_height="16dp"></RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_below="@+id/firstPlaceContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SecondPlaceContainer">
+
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:id="@+id/imagetrophy2st"
+                android:background="@drawable/backgroundsecondplace"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/trophy"
+
+                android:layout_margin="16dp"
+                android:tint="@color/backgroundColor">
+            </ImageView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/nameWinner2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Santiago Kirk"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:textSize="16dp"
+                android:layout_toRightOf="@id/imagetrophy2st"/>
+            <TextView
+                android:id="@+id/points2"
+                android:layout_below="@id/nameWinner2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 puntos de un total 26"
+                android:textColor="@color/secondary_text"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="16dp"
+                android:textSize="16dp"
+                android:layout_toRightOf="@id/imagetrophy2st"/>
+
+            <LinearLayout
+                android:layout_below="@id/points2"
+                android:layout_toRightOf="@id/imagetrophy2st"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                >
+                <RelativeLayout
+                    android:id="@+id/incorrectBar2"
+                    android:layout_width="0dp"
+                    android:layout_weight="0"
+                    android:layout_height="16dp"
+                    android:background="@color/barcolor"></RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/emptyBar2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/graphicempty"
+                    android:layout_height="16dp"></RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/SecondPlaceContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ThirdPlaceContainer">
+
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:id="@+id/imagetrophy3st"
+                android:background="@drawable/backgroundthrophycover"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/trophy"
+
+                    android:layout_margin="16dp"
+                    android:tint="@color/backgroundColor">
+                </ImageView>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/nameWinner3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Santiago Kirk"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:textSize="16dp"
+                android:layout_toRightOf="@id/imagetrophy3st"/>
+            <TextView
+                android:id="@+id/points3"
+                android:layout_below="@id/nameWinner3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 puntos de un total 26"
+                android:textColor="@color/secondary_text"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="16dp"
+                android:textSize="16dp"
+                android:layout_toRightOf="@id/imagetrophy3st"/>
+
+            <LinearLayout
+                android:layout_below="@id/points3"
+                android:layout_toRightOf="@id/imagetrophy3st"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                >
+                <RelativeLayout
+                    android:id="@+id/incorrectBar3"
+                    android:layout_width="0dp"
+                    android:layout_weight="0"
+                    android:layout_height="16dp"
+                    android:background="@color/barcolor"></RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/emptyBar3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/graphicempty"
+                    android:layout_height="16dp"></RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>
+
+</ScrollView>

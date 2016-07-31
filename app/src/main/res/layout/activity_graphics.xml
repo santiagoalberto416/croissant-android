@@ -5,17 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <include
+        android:id="@+id/infoConference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/header_info_conference"
+        />
+
     <android.support.design.widget.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         app:tabMode="fixed"
-        android:background="@color/colorPrimary"
+        android:background="@color/primary"
         android:elevation="5dp"
-        android:layout_alignParentTop="true"
         style="@style/AppTheme"
-        />
+        android:layout_below="@+id/infoConference"
+        android:layout_alignParentStart="true" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"

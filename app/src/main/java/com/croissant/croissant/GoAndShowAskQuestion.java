@@ -78,7 +78,6 @@ public class GoAndShowAskQuestion extends Activity  {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ask_question);
-        ShowInfoUser.show(this);
         ShowInfoConference.show(this);
         domain = getResources().getString(R.string.domainsite);
         urlAPI = domain + "/croissant/addquestion.php"; //API Url

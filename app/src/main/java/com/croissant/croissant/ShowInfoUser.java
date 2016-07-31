@@ -2,6 +2,7 @@ package com.croissant.croissant;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
+import android.view.View;
 import android.widget.TextView;
 
 /**
@@ -18,6 +19,14 @@ public class ShowInfoUser {
         SharedPreferences sharedPreferences = activity.getSharedPreferences("myData", activity.MODE_PRIVATE);
         String name = sharedPreferences.getString("nameUser", DEFAULT);
         nameUser = (TextView)activity.findViewById(R.id.nameUser);
+        nameUser.setText(activity.getResources().getString(R.string.hi) + name);
+    }
+
+    public static void showFromView(Activity activity, View v) {
+
+        SharedPreferences sharedPreferences = activity.getSharedPreferences("myData", activity.MODE_PRIVATE);
+        String name = sharedPreferences.getString("nameUser", DEFAULT);
+        nameUser = (TextView)v.findViewById(R.id.nameUser);
         nameUser.setText(activity.getResources().getString(R.string.hi) + name);
     }
 }

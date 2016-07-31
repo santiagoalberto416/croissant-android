@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.croissant.croissant.ActivityEvent.goAndShowActivity;
 import com.croissant.croissant.Graphics.Activities.graphics;
@@ -17,9 +18,8 @@ public class GoAndShowConference extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.conference);
-        ShowInfoUser.show(this);
         ShowInfoConference.show(this);
-        Button showActivity = (Button)findViewById(R.id.btnShowActivity);
+        RelativeLayout showActivity = (RelativeLayout) findViewById(R.id.btnShowActivity);
         showActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

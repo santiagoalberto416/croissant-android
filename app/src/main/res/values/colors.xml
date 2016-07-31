@@ -20,7 +20,10 @@
     <color name="place">#a2cff0</color>
     <color name="bad">#cf734f</color>
     <color name="good">#99bd73</color>
-
+    <color name="fistplace">#F0C419</color>
+    <color name="secondplace">#CECECE</color>
+    <color name="thirdplace">#cd7f32</color>
+    <color name="barcolor">#373737</color>
 
     <!--colorCalis -->
 

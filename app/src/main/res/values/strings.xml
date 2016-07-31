@@ -35,6 +35,10 @@
     <string name="buton1Manage">Manage Question</string>
     <string name="buton2Manage">Create Trivia</string>
     <string name="titleConference">Select a Conference :</string>
+    <string name="titlegraphics">Winners</string>
+    <string name="pointsof"> points of a total of </string>
+    <string name="scores_of_conference">Questions</string>
+    <string name="first_paces">First Places</string>
     <string name="returnButton">return</string>
     <string name="deleteButton">delete</string>
     <string name="accept">Accept</string>

@@ -9,18 +9,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
 import com.croissant.croissant.Graphics.utils.Constants;
 import com.croissant.croissant.R;
 import com.croissant.croissant.adapters.QuestionsAdapterGraphics;
-import com.example.santiago.data.Graphics;
-import com.example.santiago.data.IdUser;
+import com.example.santiago.data.GraphicsAllPersons.Graphics;
 import com.example.santiago.data.services.QuestionScoreService;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

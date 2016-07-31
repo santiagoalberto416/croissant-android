@@ -131,7 +131,6 @@ public class goAndShowActivity extends Activity{
         setContentView(R.layout.activity_contacts);
         activity = this;
         ShowInfoConference.show(this);
-        ShowInfoUser.show(this);
         SharedPreferences sharedPreferences = getSharedPreferences("myData", Context.MODE_PRIVATE);
         String idConference = sharedPreferences.getString("idConference", DEFAULT);
         domain = getResources().getString(R.string.domainsite);
@@ -299,7 +298,7 @@ public class goAndShowActivity extends Activity{
             lvQuestionWaiting.setAdapter(adapter2);
             lvQuestionWaiting.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
-            infoSpeaker = (RelativeLayout)findViewById(R.id.contentIrrelevant);
+            infoSpeaker = (RelativeLayout)findViewById(R.id.contenttoHide);
             HidingScrollListener hidingScrollListener = new HidingScrollListener(infoSpeaker, lvQuestionWaiting);
             lvQuestionWaiting.addOnScrollListener(hidingScrollListener);
         }

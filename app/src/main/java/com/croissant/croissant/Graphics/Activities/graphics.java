@@ -8,9 +8,12 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 
 import com.croissant.croissant.Graphics.utils.TabsContactsAdapter;
 import com.croissant.croissant.R;
+import com.croissant.croissant.ShowInfoConference;
+import com.croissant.croissant.ShowInfoUser;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,6 +27,7 @@ public class graphics extends AppCompatActivity {
         setContentView(R.layout.activity_graphics);
         ButterKnife.bind(this);
 
+        ShowInfoConference.show(this);
 
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tabLayout);
         final ViewPager viewPager = (ViewPager)findViewById(R.id.viewPager);
@@ -50,5 +54,7 @@ public class graphics extends AppCompatActivity {
 
 
     }
+
+
 
 }

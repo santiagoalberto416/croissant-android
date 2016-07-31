@@ -17,7 +17,24 @@
         <item name="android:minHeight">50dip</item>
         <item name="android:padding">8dip</item>
     </style>
+    <style name="contentsInfoConference2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">50dip</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
 
+    <style name="buttons_general">
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
     <style name="imgSpeakerMini">
         <item name="android:layout_width">28dip</item>
         <item name="android:layout_height">35dip</item>
@@ -38,6 +55,15 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0.5dip</item>
         <item name="android:background">@color/divisions</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_marginRight">8dip</item>
+        <item name="android:alpha">0.5</item>
+    </style>
+
+    <style name="divisions2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dip</item>
+        <item name="android:background">@color/primary_light</item>
         <item name="android:layout_marginLeft">8dip</item>
         <item name="android:layout_marginRight">8dip</item>
         <item name="android:alpha">0.5</item>

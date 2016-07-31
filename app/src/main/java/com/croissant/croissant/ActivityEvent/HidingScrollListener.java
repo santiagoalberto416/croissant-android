@@ -3,6 +3,7 @@ package com.croissant.croissant.ActivityEvent;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.RelativeLayout;
@@ -36,8 +37,8 @@ public class HidingScrollListener extends RecyclerView.OnScrollListener {
             RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) contentToHide.getLayoutParams();
             int fabBottomMargin = lp.bottomMargin;
             contentToHide.animate().translationY(-(height+fabBottomMargin))
-            .setInterpolator(new AccelerateInterpolator(2)).start();
-            contentToShow.animate().translationY(0).setInterpolator(new DecelerateInterpolator(2)).setDuration(300).start();
+            .setInterpolator(new DecelerateInterpolator(2)).start();
+            contentToShow.animate().translationY(0).setInterpolator(new DecelerateInterpolator(2)).start();
 
         }else if(differences <-margin){
             contentToHide.animate().translationY(0).setInterpolator(new DecelerateInterpolator(2)).start();
