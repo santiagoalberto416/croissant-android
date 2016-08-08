@@ -33,6 +33,7 @@ import java.util.Locale;
 import org.json.*;
 import android.util.Log;
 
+import com.croissant.croissant.Events.ReaderEvent;
 import com.github.nkzawa.emitter.Emitter;
 import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
@@ -64,7 +65,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.loginv2);
 
         ImageView usa = (ImageView)findViewById(R.id.lenguageUsa);
         usa.setOnClickListener(new View.OnClickListener() {
@@ -186,7 +187,9 @@ public class MainActivity extends Activity {
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putString("intentQstns", "3");
                         editor.commit();
-                        startActivity(new Intent(MainActivity.this, GoAndShowConferences.class));
+
+                        // change this
+                        startActivity(new Intent(MainActivity.this, ReaderEvent.class));
 
                     }
                     else {

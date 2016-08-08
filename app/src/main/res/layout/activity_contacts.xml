@@ -15,6 +15,7 @@
         android:id="@+id/header"
         style="@style/contentBanner">
         <ImageView
+            android:id="@+id/imageLogo"
             style="@style/imgLogo"
             android:src="@drawable/logo"/>
     </RelativeLayout>

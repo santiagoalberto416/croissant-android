@@ -16,6 +16,9 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.croissant.croissant.Graphics.utils.Constants;
+import com.croissant.croissant.utilities.CustomActivity;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -36,7 +39,7 @@ import java.util.ArrayList;
 /**
  * Created by brandon on 9/03/16.
  */
-public class GoAndShowConferences extends Activity {
+public class GoAndShowConferences extends CustomActivity {
 
     ListView lvConferences;
     TextView txtNameUser;
@@ -62,7 +65,6 @@ public class GoAndShowConferences extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.conferences);
-        ShowInfoUser.show(this);
         domain = getResources().getString(R.string.domainsite);
         urlAPI = domain +  "/croissant/getconferences.php"; //API Url
         new LoadConferences().execute();
@@ -101,8 +103,13 @@ public class GoAndShowConferences extends Activity {
                 connection.setDoInput(true);
                 connection.setDoOutput(true);
 
+                //shaHe
+
+                SharedPreferences sharedPreferences = getSharedPreferences("myData", Context.MODE_PRIVATE);
                 Uri.Builder builder = new Uri.Builder()
-                        .appendQueryParameter("txtnickname", "213");
+                        .appendQueryParameter("txtnickname", "213")
+                        .appendQueryParameter("id_event", sharedPreferences.getString(Constants.ID_EVENT, "0"));
+
                 String query = builder.build().getEncodedQuery();
 
                 OutputStream os = connection.getOutputStream();

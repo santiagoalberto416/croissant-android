@@ -3,6 +3,9 @@ package com.croissant.croissant;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +13,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.croissant.croissant.utilities.CustomNoActivity;
 
 import org.w3c.dom.Text;
 
@@ -20,12 +25,14 @@ public class ListAdapter_conference extends BaseAdapter
     private Activity activity;
     private ArrayList<Conference> data;
     private static LayoutInflater inflater;
+    private CustomNoActivity util;
 
     public ListAdapter_conference(Activity activity, ArrayList<Conference> data)
     {
         this.activity = activity;
         this.data = data;
         inflater = (LayoutInflater) this.activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        util = new CustomNoActivity(activity);
     }
 
     @Override
@@ -42,8 +49,12 @@ public class ListAdapter_conference extends BaseAdapter
     {
         View v = view;
 
+
+
         //layout of list adapter
         if (v == null) v = this.inflater.inflate(R.layout.conference_layout,null);
+
+        v.setBackground(getBackGround());
         //layout Controls
         RelativeLayout contentConference = (RelativeLayout)v.findViewById(R.id.contentConference);
 
@@ -61,5 +72,12 @@ public class ListAdapter_conference extends BaseAdapter
         tvTime.setText(item.getDatetime());
         //return view
         return  v;
+    }
+
+    public GradientDrawable getBackGround(){
+        GradientDrawable shape =  new GradientDrawable();
+        shape.setCornerRadius( 4 );
+        shape.setColor(Color.parseColor(util.getPRIMARY()));
+        return shape;
     }
 }

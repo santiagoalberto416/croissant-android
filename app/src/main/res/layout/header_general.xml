@@ -10,8 +10,7 @@
 
     <RelativeLayout
         style="@style/contentsInfoConference2"
-        android:id="@+id/titleConference"
-        android:layout_below="@id/contentInfoUser">
+        android:id="@+id/titleConference">
         <TextView
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"

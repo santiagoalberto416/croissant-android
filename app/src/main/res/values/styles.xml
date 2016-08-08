@@ -1,14 +1,18 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Base.AppTheme">
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DialogWhenLarge.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Base.AppTheme" parent="Theme.AppCompat.Light">
+    <style name="Base.AppTheme" parent="android:Theme.Material.Light">
         <item name="android:colorPrimary">@color/primary</item>
         <item name="android:colorPrimaryDark">@color/primary_dark</item>
         <item name="android:colorAccent">@color/accent</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -23,6 +27,7 @@
     </style>
 
     <style name="imgLogo">
+        <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">35dip</item>
         <item name="android:layout_marginTop">8dip</item>
@@ -30,7 +35,7 @@
     </style>
 
     <style name="contentBanner">
-        <item name="android:background">@drawable/header_gradient</item>
+        <item name="android:background">@color/primary_dark</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingTop">3dip</item>
@@ -141,7 +146,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/backgroundColor</item>
-        <item name="android:textSize">22dip</item>
+        <item name="android:textSize">18dp</item>
         <item name="android:textColor">@color/infoConference</item>
         <item name="android:textColorHint">@color/infoConference</item>
     </style>
@@ -172,7 +177,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:padding">14dip</item>
-        <item name="android:textSize">22dip</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/infoConference</item>
     </style>
 
@@ -248,11 +253,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16dip</item>
-        <item name="android:gravity">center</item>
         <item name="android:layout_centerVertical">true</item>
         <item name="android:textColor">@color/infoConference</item>
-        <item name="android:layout_marginLeft">8dip</item>
-        <item name="android:layout_marginRight">8dip</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">8dp</item>
     </style>
 
     <style name="imgLogoModerator">

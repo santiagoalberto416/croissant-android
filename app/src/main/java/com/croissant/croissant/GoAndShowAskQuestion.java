@@ -1,16 +1,14 @@
 package com.croissant.croissant;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompatSideChannelService;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
@@ -19,14 +17,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -39,22 +35,19 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.net.URLEncoder;
-import java.sql.Time;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import com.github.nkzawa.emitter.Emitter;
+import com.croissant.croissant.utilities.CustomActivity;
 import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
 
 /**
  * Created by brandon on 12/03/16.
  */
-public class GoAndShowAskQuestion extends Activity  {
+public class GoAndShowAskQuestion extends CustomActivity {
 
     public static final String DEFAULT = "N/A";
     private ProgressDialog pd;
@@ -72,12 +65,13 @@ public class GoAndShowAskQuestion extends Activity  {
     private static final String LABEL_USERSTATUS ="userstatus";
     private static final String LABEL_TYPEUSER ="type";
     private final String USER_AGENT = "Mozilla/5.0";
-
+    private Button send;
     private Socket socket;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ask_question);
+        send = (Button)findViewById(R.id.btnSend);
         ShowInfoConference.show(this);
         domain = getResources().getString(R.string.domainsite);
         urlAPI = domain + "/croissant/addquestion.php"; //API Url
@@ -373,6 +367,18 @@ public class GoAndShowAskQuestion extends Activity  {
     @Override
     public void onBackPressed() {
         startActivity(new Intent(this, GoAndShowConference.class));
+    }
+
+    @Override
+    public void customizeViews(){
+        super.customizeViews();
+        customInfoConference();
+        GradientDrawable shape =  new GradientDrawable();
+        shape.setCornerRadius( 4 );
+        shape.setColor(Color.parseColor(ASCENT));
+        if(send!=null) {
+            send.setBackground(shape);
+        }
     }
 
 }

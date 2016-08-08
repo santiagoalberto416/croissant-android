@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context="com.croissant.croissant.Events.ReaderEvent">
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/backgroudsquared"
+        android:scaleType="centerCrop"
+        android:alpha=".2"/>
+
+    <RelativeLayout
+        android:id="@+id/header"
+        style="@style/contentBanner">
+        <ImageView
+            style="@style/imgLogo"
+            android:src="@drawable/logo"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/titlescan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text"
+            android:textSize="20dp"
+            android:text="@string/titleScan"/>
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_below="@id/titlescan"
+            android:id="@+id/imageexample"
+            android:elevation="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@color/backgroundColor">
+
+            <ImageView
+                android:id="@+id/imgEvent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:src="@drawable/qrexample"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_below="@id/imageexample"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ScanButton"
+                android:onClick="QrScanner"
+                android:text="@string/buttonScan"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

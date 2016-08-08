@@ -42,6 +42,8 @@
     <string name="returnButton">return</string>
     <string name="deleteButton">delete</string>
     <string name="accept">Accept</string>
+    <string name="titleScan">Scan the event QR code!</string>
+    <string name="buttonScan">Scan QR</string>
     <string name="editQuestion">Edit question</string>
     <string name="emailTint">e-mail</string>
     <string name="password">Password</string>
@@ -63,5 +65,23 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="baseurl">https://croissant-santy-ruler.c9users.io/croissant/</string>
+    <string name="eventapiurl">getEvent.php</string>
+    <string name="imgUrl">https://croissant-santy-ruler.c9users.io/croissant-web/web/ImageConference/</string>
+
+
+    <string name="primary">#009688</string>
+    <string name="primary_dark">#00796B</string>
+    <string name="primary_light">#B2DFDB</string>
+    <string name="accent">#FF5722</string>
+    <string name="primary_text">#212121</string>
+    <string name="secondary_text">#727272</string>
+    <string name="icons">#FFFFFF</string>
+    <string name="divider">#B6B6B6</string>
+    <string name="linecolor">#e1e1e1</string>
+    <string name="graphicempty">#C8C8C8</string>
+    <string name="grapsgood">#009688</string>
+    <string name="grapsbad">#880000</string>
+    <string name="graybackground">#EBEBEB</string>
 
 </resources>

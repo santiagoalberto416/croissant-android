@@ -3,7 +3,7 @@
     package="com.croissant.croissant">
 
     <uses-sdk
-        android:minSdkVersion="23"
+        android:minSdkVersion="16"
         android:targetSdkVersion="23" />
     />
     <supports-screens
@@ -13,9 +13,11 @@
     />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
@@ -57,8 +59,10 @@
         <activity
             android:name=".ActivityEvent.goAndShowActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Graphics.Activities.graphics"></activity>
-
+        <activity android:name=".Graphics.Activities.graphics"
+            />
+        <activity android:name=".Events.ReaderEvent"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

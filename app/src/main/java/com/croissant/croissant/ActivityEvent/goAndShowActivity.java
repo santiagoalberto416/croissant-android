@@ -27,6 +27,8 @@ import com.croissant.croissant.Question;
 import com.croissant.croissant.R;
 import com.croissant.croissant.ShowInfoConference;
 import com.croissant.croissant.ShowInfoUser;
+import com.croissant.croissant.utilities.CustomActivity;
+import com.croissant.croissant.utilities.CustomNoActivity;
 import com.github.nkzawa.emitter.Emitter;
 import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
@@ -51,7 +53,7 @@ import java.util.ArrayList;
 /**
  * Created by santiago on 14/06/2016.
  */
-public class goAndShowActivity extends Activity{
+public class goAndShowActivity extends CustomActivity {
 
     RecyclerView lvQuestionWaiting;
     private static ProgressDialog pd;
@@ -470,5 +472,10 @@ public class goAndShowActivity extends Activity{
     */
 
 
+    @Override
+    public void customizeViews(){
+        super.customizeViews();
+        customInfoConference();
+    }
 
 }

@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/contentConference">
+    android:id="@+id/contentConference"
+    android:elevation="2dp"
+    >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="7dp"
-        android:background="@drawable/background_btnoptions">
+        android:layout_marginRight="7dp">
     <TextView
         style="@style/titleConferences"
         android:id="@+id/nameConference"

@@ -2,18 +2,21 @@ package com.croissant.croissant;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.croissant.croissant.ActivityEvent.goAndShowActivity;
 import com.croissant.croissant.Graphics.Activities.graphics;
+import com.croissant.croissant.utilities.CustomActivity;
 
 /**
  * Created by brandon on 12/03/16.
  */
-public class GoAndShowConference extends Activity{
+public class GoAndShowConference extends CustomActivity{
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +48,14 @@ public class GoAndShowConference extends Activity{
     @Override
     public void onBackPressed() {
         startActivity(new Intent(this, GoAndShowConferences.class));
+    }
+
+    @Override
+    public void customizeViews(){
+        super.customizeViews();
+        customInfoConference();
+        customButtons();
+
     }
 
 }
